@@ -39,11 +39,6 @@
          backup: yes
       notify:
          - Restart mysql
-  handlers:
-    - name: Restart mysql
-      service:
-        name: mysql
-        state: restarted
     - name: Copy sample data
       copy: src=dump.sql dest=/tmp/dump.sql
   
@@ -52,3 +47,8 @@
 
     - name: Install MySQL extension for PHP
       apt: name=php5-mysql state=present
+  handlers:
+    - name: Restart mysql
+      service:
+        name: mysql
+        state: restarted

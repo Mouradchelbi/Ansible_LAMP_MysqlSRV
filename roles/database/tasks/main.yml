@@ -22,14 +22,14 @@
         enabled: yes
     - name: creating mysql user (medium_post)
       mysql_user:
-        name: dbuser02
-        password: pass123
+        name: demo
+        password: 
         priv: '*.*:ALL'
         host: '%'
         state: present
-    - name: creating medium_db
+    - name: creating db
       mysql_db:
-        name: dbtest2
+        name: demo
         state: present
     - name: Enable remote login to mysql
       lineinfile:
@@ -44,7 +44,6 @@
       service:
         name: mysql
         state: restarted
-
     - name: Copy sample data
       copy: src=dump.sql dest=/tmp/dump.sql
   

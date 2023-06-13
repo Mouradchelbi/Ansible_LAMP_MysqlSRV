@@ -1,17 +1,7 @@
 # playbook.yml
 ---
 - hosts: webservers
-  become: true
-  
-  tasks:
-    - name: Installing apache and PHP module for Apache
-
-
 - hosts: database
-  become: true
 
-  tasks:
-    - name: Installing mysql and database
- 
 
     

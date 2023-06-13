@@ -1,7 +1,7 @@
 # roles/database/tasks/main.yml
 ---
 - name: setup Mysql & remote login
-  hosts: mysqlserver
+  hosts: database
   become: true
   tasks:
     - name: Installing Mysql  and dependencies

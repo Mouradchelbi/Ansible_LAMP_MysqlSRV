@@ -1,6 +1,6 @@
 # roles/database/tasks/main.yml
 ---
-- name: setup Mysql with mysql db and remote login
+- name: setup Mysql & remote login
   hosts: mysqlserver
   become: true
   tasks:

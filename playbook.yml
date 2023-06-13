@@ -1,6 +1,6 @@
 # playbook.yml
 ---
-- hosts: webservers
+- hosts: webserver
 - hosts: database
 
 
